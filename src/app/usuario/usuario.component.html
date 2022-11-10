@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12 text-end">
+        <button class="btn btn-primary">NEW</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 text-end">
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let u of usuarios">
+                        <td>{{u.id}}</td>
+                        <td>{{u.nome}}</td>
+                        <td>{{u.email}}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">Editar</button>
+                            <button (click)="excluir(u.id)" class="btn btn-danger btn-sm">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
